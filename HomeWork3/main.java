@@ -1,7 +1,6 @@
 package HomeWork3;
 
 import java.io.FileWriter;
-import java.lang.reflect.Field;
 import java.util.Scanner;
 import HomeWork3.Checks.Check;
 import HomeWork3.Exceptions.CheckCountException;
@@ -33,13 +32,12 @@ public class main {
                     e.getStackTrace();
                 }
             }
-            // System.out.printf("Your firstname: %s \n", firstName);
         } catch (CheckCountException | CheckNameException | CheckDateException | CheckTelException | CheckMaleException e) {
             e.getMessage();
         }
         
     }
-    // Реализовать метод проверки!
+    // Метод проверки валидности данных
     public static boolean isValid(String[]fields) throws CheckCountException, CheckNameException, 
                                                             CheckDateException, CheckTelException, CheckMaleException {
         if(!Check.checkCount(5, fields)){
